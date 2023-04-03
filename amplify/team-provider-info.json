@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lovewithin-dev-134243-authRole",
+      "UnauthRoleArn": "arn:aws:iam::971149142808:role/amplify-lovewithin-dev-134243-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::971149142808:role/amplify-lovewithin-dev-134243-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lovewithin-dev-134243-deployment",
+      "UnauthRoleName": "amplify-lovewithin-dev-134243-unauthRole",
+      "StackName": "amplify-lovewithin-dev-134243",
+      "StackId": "arn:aws:cloudformation:us-east-1:971149142808:stack/amplify-lovewithin-dev-134243/5311fad0-d24f-11ed-8e2a-0e5e6e89f46f",
+      "AmplifyAppId": "d309gpkkmxzcno"
+    },
+    "categories": {
+      "auth": {
+        "lovewithina8c46fbe": {}
+      }
+    }
+  }
+}

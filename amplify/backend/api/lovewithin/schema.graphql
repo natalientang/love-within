@@ -1,0 +1,10 @@
+type JournalEntryModel @model @auth(rules: [{allow: public}, {allow: private}]) {
+  id: ID!
+  date: AWSDate!
+  gratitude: String!
+  dailyGoals: String!
+  affirmation: String!
+  amazingMoment: String!
+  improvement: String!
+  notes: String
+}

@@ -1,29 +1,26 @@
-import logo from "./images/logo.png";
+import logo from '../images/logo.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
+import { useState } from 'react';
 
-export default function Layout({ children }) {
+export default function Navbar() {
+    const [isMenuActive, setIsMenuActive] = useState(false);
+
     const toggleMenu = () => {
-        const hamburger = document.querySelector('.hamburger');
-        const mobileNav = document.querySelector('.mobile-nav');
-        hamburger.classList.toggle('is-active');
-        mobileNav.classList.toggle('is-active');
+        setIsMenuActive(!isMenuActive)
     }
 
     window.addEventListener('resize', () => {
-        const mobileNav = document.querySelector('.mobile-nav');
         if (window.innerWidth >= 768) {
-          mobileNav.classList.remove('is-active');
-          const hamburger = document.querySelector('.hamburger');
-          hamburger.classList.remove('is-active');
+          setIsMenuActive(false);
         }
       });
 
   return (
     <>
-      <nav style={{ backgroundColor: "#FAFAFA" }}>
+      <div style={{ backgroundColor: "#FAFAFA" }}>
       <div className="navbar-container">
-      <button className="hamburger" onClick={toggleMenu}>
+      <button className={`hamburger ${isMenuActive ? 'is-active' : ''}`} onClick={toggleMenu}>
         <div className="bar"></div>
       </button>
         <div className="navbar-logo">
@@ -33,7 +30,7 @@ export default function Layout({ children }) {
           </div>
         </div>
         <div>
-          <div className="navbar-links">
+          <div className={`navbar-links ${isMenuActive ? 'is-active' : ''}`}>
             <a href="/about">about</a>
             <a href="/dailyaffirmations">daily affirmations</a>
             <a href="/journal">journal</a>
@@ -48,7 +45,7 @@ export default function Layout({ children }) {
             </div>
           </div>
         </div>
-        <div className="mobile-nav">
+        <div className={`mobile-nav ${isMenuActive ? 'is-active' : ''}`}>
             <a href="/profile">profile</a>
             <a href="/favorites">favorites</a>
             <a href="/about">about</a>
@@ -56,10 +53,7 @@ export default function Layout({ children }) {
             <a href="/journal">journal</a>
             <a href="/resources">resources</a>
         </div>
-      </nav>
-
-      {children}
-      <footer>footer</footer>
+      </div>
     </>
   );
 }

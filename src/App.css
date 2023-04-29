@@ -194,3 +194,44 @@
     display: none;
   }
 }
+
+.footer-font {
+  font-family: 'Inika', serif;
+  font-size: 12px;
+}
+
+.footer-font-links-title {
+  font-family: 'Inika', serif;
+  margin-top: 20px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.footer-font-links {
+  font-size: 13px;
+  margin-top: 10px;
+  color: black;
+  font-family: 'Inika', serif;
+}
+
+.footer-font-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-font-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  margin-right: 25px;
+}
+
+.linkedin-logo {
+  margin-bottom: 7px;
+  margin-right: 5px;
+}
+
+.social-logo {
+  margin-right: 5px;
+}

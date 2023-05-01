@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,201 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-right: 40px;
+}
+
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: #FAFAFA;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: black;
+  margin-right: 0.7rem;
+  font-family: 'Inika', serif;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #B2C5D6;
+}
+
+.navbar-links a:last-child {
+  margin-right: auto;
+  margin-left: -3rem;
+}
+
+.navbar-links .heart-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 6rem;
+}
+
+.navbar-links .user-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 4rem;
+}
+
+.navbar-links.show a {
+  margin-bottom: 0.5rem;
+}
+
+.navbar-menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+}
+
+
+
+.hamburger {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  border: none;
+  z-index: 99;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-4px, 7px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-4px, -8px);
+}
+
+.hamburger.is-active .bar {
+ opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  z-index: 98;
+  background-color: #FFFFFF;
+  padding-top: 100px;
+  width: 300px;
+  transition: 0.4s;
+  transform: translateX(-100%);
+  font-family: 'Inika', serif;
+}
+
+.mobile-nav a {
+  display: block;
+  width: fit-content;
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+.mobile-nav a:hover {
+  color: #B2C5D6;
+}
+
+.mobile-nav.is-active {
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+.footer-font {
+  font-family: 'Inika', serif;
+  font-size: 12px;
+}
+
+.footer-font-links-title {
+  font-family: 'Inika', serif;
+  margin-top: 20px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.footer-font-links {
+  font-size: 13px;
+  margin-top: 10px;
+  color: black;
+  font-family: 'Inika', serif;
+}
+
+.footer-font-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-font-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  margin-right: 25px;
+}
+
+.linkedin-logo {
+  margin-bottom: 7px;
+  margin-right: 5px;
+}
+
+.social-logo {
+  margin-right: 5px;
 }

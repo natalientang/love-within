@@ -6,13 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        backgroundColor: "#F7F7F7",
-        height: "150px",
-        position: "relative",
-      }}
-    >
+    <footer>
       <Container>
         <Row>
           <Col>
@@ -40,7 +34,7 @@ export default function Footer() {
           <div className="text-center">
               <div className="footer-font-links-title">socials</div>
               <div className="footer-font-links">
-                <a href="mailto:natalietang77@gmail.com">
+                <a href="/contact">
                   <img src={mailLogo} alt="Contact" width="15" height="15" className="social-logo"/>
                   contact</a>
               </div>
@@ -59,6 +53,7 @@ export default function Footer() {
         </Row>
       </Container>
       <Row
+
         style={{ position: "absolute", bottom: "0", width: "100%" }}
         className="text-center"
       >

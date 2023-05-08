@@ -1,12 +1,13 @@
 import "./MainPage.css";
-import mainPageBanner from "../components/images/mainpage-banner.png";
-import selfLove from "../components/images/self-love-pic.png";
-import heartPlane from "../components/images/heart-plane.png";
-import heartPic from "../components/images/heart.png";
-import writePic from "../components/images/write.png";
+import mainPageBanner from "../../components/images/mainpage-banner.png";
+import selfLove from "../../components/images/self-love-pic.png";
+import heartPlane from "../../components/images/heart-plane.png";
+import heartPic from "../../components/images/heart.png";
+import writePic from "../../components/images/write.png";
 
 export default function MainPage() {
   return (
+    <>
     <div className="App-header">
       <img src={mainPageBanner} alt="banner" className="banner" />
       <div className="welcome-container">
@@ -35,7 +36,7 @@ export default function MainPage() {
       <div className="second-container">
         <div className="column1">
           <h1>receive a</h1>
-          <div class="button-container">
+          <div className="button-container">
             <a href="/dailyaffirmations">
               <button className="second-container-button">daily affirmation</button>
             </a>
@@ -44,7 +45,7 @@ export default function MainPage() {
         </div>
         <div className="column2">
           <h1>begin</h1>
-          <div class="button-container">
+          <div className="button-container">
             <a href="/journal">
               <button className="second-container-button">journaling</button>
             </a>
@@ -53,5 +54,6 @@ export default function MainPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
